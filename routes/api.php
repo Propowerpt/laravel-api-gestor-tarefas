@@ -26,6 +26,8 @@ Route::post('/tarefas', [TarefaController::class, 'store']);
 Route::get('/tarefas/{id}/edit', [TarefaController::class, 'edit']);
 Route::put('/tarefas/{id}', [TarefaController::class, 'update']);
 Route::delete('/tarefas/{id}', [TarefaController::class, 'destroy']);
+Route::post('/tarefas/{id}/claim', [TarefaController::class, 'claimTask']);
+
 
 //ROTAS DAS PRIORIDADES
 Route::get('/prioridades', [PrioridadeController::class, 'index']);
