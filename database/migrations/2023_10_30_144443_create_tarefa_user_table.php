@@ -14,11 +14,11 @@ return new class extends Migration
         Schema::create('tarefa_user', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('tarefa');
+            $table->unsignedBigInteger('tarefa_id');
             $table->timestamps();
         
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('tarefa')->references('id')->on('tarefa')->onDelete('cascade');
+            $table->foreign('tarefa_id')->references('id')->on('tarefa')->onDelete('cascade');
         });
     }
 
