@@ -23,11 +23,11 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        // Criar um usuário padrão
+        // Criar um utilizador padrão
         DB::table('users')->insert([
             'name' => 'demo',
             'email' => 'demo@exemplo.com',
-            'password' => Hash::make('demo'),
+            'password' => Hash::make('123'),
         ]);
     }
 
