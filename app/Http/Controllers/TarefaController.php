@@ -14,7 +14,6 @@ class TarefaController extends Controller
 {
     public function index(Request $request)
     {
-        //comentario teste
         $termoDePesquisa = $request->input('titulo');
 
         if ($termoDePesquisa) {
