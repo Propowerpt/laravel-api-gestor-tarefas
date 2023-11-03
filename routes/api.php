@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\TarefaController;
 use App\Http\Controllers\PrioridadeController;
+use App\Http\Controllers\TesteController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -35,3 +36,7 @@ Route::post('/tarefas/{id}/claim', [TarefaController::class, 'claimTask']);
 
 //ROTAS DAS PRIORIDADES
 Route::get('/prioridades', [PrioridadeController::class, 'index']);
+
+
+//ROTAS PARA TESTES
+Route::get('/teste', [TesteController::class, 'index']);
