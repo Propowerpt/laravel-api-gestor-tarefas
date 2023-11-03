@@ -19,7 +19,7 @@ class AuthController extends Controller
         //NO POSTMAN PREENCHER cOM EMAIL VALIDO E PASSWORD POR ALGUMA RAZAO O POSTMAN NÃO DEVOLVE 
         //ERRO CASO OS CAMPOS NÃO ESTEJAM VALIDOS
         if (Auth::attempt($credentials)) {
-            $token = $request->user()->createToken('invoice');
+            $token = $request->user()->createToken('access_token',['roleUser']);
             return response()->json(['sucesso' => 'Entrada autorizada','token' => $token->plainTextToken], 200);
         }else{
             return response()->json(['error' => 'Credenciais erradas'], 400);
