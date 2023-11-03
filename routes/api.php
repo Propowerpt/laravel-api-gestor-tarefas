@@ -39,4 +39,6 @@ Route::get('/prioridades', [PrioridadeController::class, 'index']);
 
 
 //ROTAS PARA TESTES
-Route::get('/teste', [TesteController::class, 'index'])->middleware('auth:sanctum');
+Route::get('/testeIndex', [TesteController::class, 'index'])->middleware('auth:sanctum');
+Route::get('/testeIndexAdmin', [TesteController::class, 'indexAdmin'])->middleware('auth:sanctum','abilities:roleAdmin');
+Route::get('/testeIndexUser', [TesteController::class, 'indexUser'])->middleware('auth:sanctum','abilities:roleUser');

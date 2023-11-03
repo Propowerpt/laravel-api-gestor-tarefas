@@ -17,4 +17,12 @@ class TesteController extends Controller
             return "isto é um utilizador normal";
         }
     }
+
+    public function indexAdmin(){
+        return "Entrei no indexAdmin";
+    }
+
+    public function indexUser(){
+        return "Entrei no indexUser";
+    }
 }
