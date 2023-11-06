@@ -43,3 +43,4 @@ Route::get('/prioridades', [PrioridadeController::class, 'index']);
 Route::get('/testeIndex', [TesteController::class, 'index'])->middleware('auth:sanctum');
 Route::get('/testeIndexAdmin', [TesteController::class, 'indexAdmin'])->middleware('auth:sanctum','abilities:roleAdmin');
 Route::get('/testeIndexUser', [TesteController::class, 'indexUser'])->middleware('auth:sanctum','abilities:roleUser');
+Route::get('/getTeste', [TesteController::class, 'getTeste']);
