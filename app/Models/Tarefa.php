@@ -16,4 +16,8 @@ class Tarefa extends Model
     {
         return $this->belongsTo(Prioridade::class,'prioridade_id');
     }
+
+    public function users(){
+        return $this->belongsToMany(User::class,'tarefa_user');
+    }
 }
