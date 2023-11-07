@@ -70,4 +70,16 @@ class TarefaController extends Controller
             return response()->json(['error' => 'O utilizador já está atribuído a esta tarefa'], 400);
         }
     }
+
+    public function completeTask($id){
+        $tarefa=Tarefa::find($id);
+        $tarefa->update(['completa' => 1 ]);
+        return new TarefaResource($tarefa);
+    }
+
+    public function unfinishedTask($id){
+        $tarefa=Tarefa::find($id);
+        $tarefa->update(['completa' => 0 ]);
+        return new TarefaResource($tarefa);
+    }
 }

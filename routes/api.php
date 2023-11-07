@@ -33,6 +33,8 @@ Route::get('/tarefas/{id}/edit', [TarefaController::class, 'edit']);
 Route::put('/tarefas/{id}', [TarefaController::class, 'update']);
 Route::delete('/tarefas/{id}', [TarefaController::class, 'destroy']);
 Route::post('/tarefas/{id}/claim', [TarefaController::class, 'claimTask']);
+Route::put('/tarefas/{id}/complete', [TarefaController::class, 'completeTask']);
+Route::put('/tarefas/{id}/unfinished', [TarefaController::class, 'unfinishedTask']);
 
 
 //ROTAS DAS PRIORIDADES
